@@ -7,10 +7,15 @@
             <div class="container mt-5">
                 <h2 class="hero-title text-center mb-5">অর্ডারের জন্যে ফর্মটি পূর্ণ করুন</h2>
                 @auth
-                <form>
+                <form method="post" action="userOrder/{{ Auth::user()->id }} " enctype="multipart/form-data">
+                    @csrf
                     <div class="form-group">
                         <label for="exampleFormControlFile1">অর্ডারের ছবিটি সিলেক্ট করুন</label>
-                        <input type="file" class="form-control-file" >
+                        <input type="file" name="product_image" class="form-control-file" >
+                      </div>
+                      <div class="form-group">
+                        <label for="quantity">মোট সংখ্যা</label>
+                        <input type="test" class="form-control" name="quantity">
                       </div>
                     <button class="btn btn-primary" type="submit">সাবমিট</button>
                 </form>
