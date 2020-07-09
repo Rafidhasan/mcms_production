@@ -1,9 +1,22 @@
 @extends('layouts.app')
 @section('content')
+
+
     <div class="content">
         <div class="title m-b-md">
             <div class="container mt-5">
                 <h2 class="hero-title text-center mb-5">অর্ডারের জন্যে ফর্মটি পূর্ণ করুন</h2>
+                @auth
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">অর্ডারের ছবিটি সিলেক্ট করুন</label>
+                        <input type="file" class="form-control-file" >
+                      </div>
+                    <button class="btn btn-primary" type="submit">সাবমিট</button>
+                </form>
+                @endauth
+
+                @guest
                 <form>
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
@@ -27,6 +40,7 @@
                       </div>
                     <button class="btn btn-primary" type="submit">সাবমিট</button>
                 </form>
+                @endguest
         </div>
     </div>
 @endsection

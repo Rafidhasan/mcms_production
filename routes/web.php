@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// User profile route
+Route::post('/{user_id}', 'UserProfileController@update');
+Route::get('/{user_id}', 'UserProfileController@index');
