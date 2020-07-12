@@ -14,7 +14,12 @@ class UserOrderController extends Controller
         $input = $request->all();
 
         $request->validate([
-
+            'name' => 'required',
+            'phone_no' => 'required|min:10|numeric',
+            'address' => 'required',
+            'link' => 'required',
+            'quantity' => 'required',
+            'product_image' => 'required'
         ]);
         $file = $request->file('product_image');
         $extension = $file->getClientOriginalExtension();

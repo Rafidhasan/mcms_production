@@ -17,8 +17,7 @@ class GuestOrderController extends Controller
             'phone_no' => 'required|min:10|numeric',
             'address' => 'required',
             'link' => 'required',
-            'quantity' => 'required',
-            'product_image' => 'required'
+            'quantity' => 'required'
         ]);
 
         $guestOrder->name = $request->input('name');
