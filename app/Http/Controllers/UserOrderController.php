@@ -24,6 +24,6 @@ class UserOrderController extends Controller
 
 
         $userOrder->save();
-        return redirect('/');
+        return redirect('/')->with('status', 'আপনার অর্ডারটি আমরা পেয়েছি');
     }
 }

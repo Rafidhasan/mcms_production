@@ -24,10 +24,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //oder routes
 Route::post('/userOrder/{user_id}', 'UserOrderController@store');
+Route::post('/guestOrder', 'GuestOrderController@store');
 
 
 // User profile route
 Route::post('/{user_id}', 'UserProfileController@update');
 Route::get('/{user_id}', 'UserProfileController@index');
+
+
 
 

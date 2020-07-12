@@ -81,7 +81,7 @@
                             <label for="link" class="col-md-4 col-form-label text-md-right">ফেসবুক প্রোফাইল লিংক</label>
 
                             <div class="col-md-6">
-                                <input class="form-control" placeholder="https://www.facebook.com/username/" name="link" required>
+                                <input type="text" class="form-control" placeholder="https://www.facebook.com/username/" name="link" required>
                             </div>
                         </div>
 
