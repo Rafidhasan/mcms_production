@@ -10,6 +10,16 @@ class GuestOrderController extends Controller
     public function store(Request $request)
     {
         $guestOrder = new GuestOrder();
+        $input = $request->all();
+
+        $request->validate([
+            'name' => 'required',
+            'phone_no' => 'required|min:10|numeric',
+            'address' => 'required',
+            'link' => 'required',
+            'quantity' => 'required',
+            'product_image' => 'required'
+        ]);
 
         $guestOrder->name = $request->input('name');
         $guestOrder->phone_no = $request->input('phone_no');

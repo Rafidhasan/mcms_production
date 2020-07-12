@@ -11,8 +11,11 @@ class UserOrderController extends Controller
 {
     public function store(Request $request, $user_id) {
         $userOrder = new UserOrder();
+        $input = $request->all();
 
+        $request->validate([
 
+        ]);
         $file = $request->file('product_image');
         $extension = $file->getClientOriginalExtension();
         $filename = time() . '.' . $extension;
